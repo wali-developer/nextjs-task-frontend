@@ -4,7 +4,7 @@ import { IoSearch } from "react-icons/io5";
 
 const Navbar = () => {
   return (
-    <nav className="w-full bg-white h-[80px]">
+    <nav className="w-full bg-white h-[75px]">
       <div className="container-lg h-full">
         <div className="h-full flex justify-between items-center">
           <div className="flex gap-x-2 items-center">
@@ -13,7 +13,7 @@ const Navbar = () => {
             </div>
             <h6 className="2xl:text-2xl font-extrabold text-black">ZinTools</h6>
           </div>
-          <div className="bg-lightBg h-[52px] rounded-full px-7 w-[540px] py-2 max-w-full flex justify-between items-center">
+          <div className="bg-lightBg h-[48px] rounded-full px-7 w-[540px] py-2 max-w-full flex justify-between items-center">
             <input
               type="text"
               placeholder="Search for Movies, TV Shows, Themes & Cast"
@@ -23,11 +23,11 @@ const Navbar = () => {
               <IoSearch />
             </span>
           </div>
-          <div className="flex gap-x-8 items-center">
-            <button className="text-base 2xl:text-lg font-medium text-gray-500">
+          <div className="flex gap-x-7 items-center">
+            <button className="text-base  font-medium text-gray-500">
               Log in
             </button>
-            <button className="bg-dodgerBlue text-white h-[52px] rounded-full px-7 text-base 2xl:text-lg">
+            <button className="bg-dodgerBlue text-white h-[44px] rounded-full px-7 text-base ">
               Sign up
             </button>
           </div>
