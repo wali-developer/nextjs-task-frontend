@@ -1,19 +1,16 @@
 import React from "react";
 import { RiSettings4Fill } from "react-icons/ri";
 import { IoSearch } from "react-icons/io5";
+import { FaBars } from "react-icons/fa6";
+import Logo from "../common/Logo";
 
-const Navbar = () => {
+const Navbar = ({ onOpenMenu }) => {
   return (
-    <nav className="w-full bg-white h-[75px]">
+    <nav className="w-full h-[75px]">
       <div className="container-lg h-full">
-        <div className="h-full flex justify-between items-center">
-          <div className="flex gap-x-2 items-center">
-            <div className="w-[40px] h-[40px] bg-dodgerBlue rounded-lg inline-flex justify-center items-center">
-              <RiSettings4Fill className="text-4xl text-white" />
-            </div>
-            <h6 className="2xl:text-2xl font-extrabold text-black">ZinTools</h6>
-          </div>
-          <div className="bg-lightBg h-[48px] rounded-full px-7 w-[540px] py-2 max-w-full flex justify-between items-center">
+        <div className="h-full flex flex-wrap justify-between items-center">
+          <Logo />
+          <div className="hidden bg-lightBg h-[48px] rounded-full px-7 w-[540px] py-2 max-w-full lg:flex justify-between items-center">
             <input
               type="text"
               placeholder="Search for Movies, TV Shows, Themes & Cast"
@@ -23,12 +20,22 @@ const Navbar = () => {
               <IoSearch />
             </span>
           </div>
-          <div className="flex gap-x-7 items-center">
-            <button className="text-base  font-medium text-gray-500">
+          <div className="flex gap-x-4 sm:gap-x-7 items-center ml-auto lg:ml-0">
+            <span className="block lg:hidden text-2xl text-black ml-6">
+              <IoSearch />
+            </span>
+            <button className="text-sm sm:text-base  font-medium text-gray-500">
               Log in
             </button>
-            <button className="bg-dodgerBlue text-white h-[44px] rounded-full px-7 text-base ">
+            <button className="bg-dodgerBlue text-white h-[36px] sm:h-[44px] rounded-full px-5 sm:px-7 text-sm sm:text-base ">
               Sign up
+            </button>
+            {/* Menu Bar button below medium screen */}
+            <button
+              className="text-xl text-black block lg:hidden"
+              onClick={onOpenMenu}
+            >
+              <FaBars />
             </button>
           </div>
         </div>

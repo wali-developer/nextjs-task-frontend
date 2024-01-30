@@ -1,5 +1,9 @@
-import Image from "next/image";
+import ConvertFromPDFBlock from "@/components/home/ConvertFromPDFBlock";
 
 export default function Home() {
-  return <main>Next.js</main>;
+  return (
+    <main>
+      <ConvertFromPDFBlock />
+    </main>
+  );
 }
