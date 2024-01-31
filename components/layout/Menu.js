@@ -22,9 +22,9 @@ const Menu = ({ isOpen, onCloseMenu }) => {
       name: "Video Templates",
       path: "#",
       subMenu: [
-        { name: "Stock Footage", path: "#" },
-        { name: "Stock Footage", path: "#" },
-        { name: "Stock Footage", path: "#" },
+        { name: "After Effects", path: "#" },
+        { name: "After Effects", path: "#" },
+        { name: "After Effects", path: "#" },
       ],
     },
     { name: "Music", path: "#" },
@@ -38,9 +38,9 @@ const Menu = ({ isOpen, onCloseMenu }) => {
     { name: "More", path: "#" },
   ];
   return (
-    <div className="container-lg">
+    <div className="container-xl">
       <ul
-        className={`list-none flex gap-x-5 items-center xl:justify-between flex-wrap -ml-2 z-[99] fixed top-0 right-0 bg-dodgerBlue w-full h-full lg:static lg:bg-transparent flex-col lg:flex-row gap-y-7 justify-center transition-all duration-300 ${
+        className={`list-none flex gap-x-5 items-center xl:justify-between flex-wrap z-[99] fixed top-0 right-0 bg-dodgerBlue w-full h-full lg:static lg:bg-transparent flex-col lg:flex-row gap-y-7 justify-center transition-all duration-300 lg:px-8 xl:px-12 ${
           isOpen
             ? ""
             : "invisible opacity-0 w-0 lg:opacity-100 lg:flex md:w-full lg:h-full lg:visible"
@@ -52,7 +52,7 @@ const Menu = ({ isOpen, onCloseMenu }) => {
           ) : (
             <li
               key={index}
-              className="inline-block lg:border-b-2 lg:border-white hover:border-dodgerBlue lg:py-5 transition-all duration-500 px-2"
+              className="inline-block lg:border-b-2 lg:border-white hover:border-dodgerBlue lg:pb-5 lg:pt-5 transition-all duration-500 px-2"
             >
               <Link href={item.path}>
                 <span className="text-sm font-medium text-white lg:text-gray-600">

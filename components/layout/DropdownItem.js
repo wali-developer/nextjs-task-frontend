@@ -9,7 +9,7 @@ const DropdownItem = ({ item }) => {
     <>
       <li className="relative">
         <div
-          className="inline-block lg:border-b-2 border-white lg:hover:border-[#523ee8] transition-all duration-500 px-2"
+          className="inline-block lg:border-b-2 border-white lg:hover:border-[#523ee8] transition-all duration-500 px-2 lg:pb-5 lg:pt-5"
           onMouseEnter={() => setVisible(true)}
           onMouseLeave={() => setVisible(false)}
         >
@@ -29,7 +29,7 @@ const DropdownItem = ({ item }) => {
         >
           {item?.subMenu.map((sub, index) => (
             <li
-              className="inline-block hover:text-[#523ee8] py-5 transition-all duration-500 px-2 h-8"
+              className="inline-block hover:text-[#523ee8] py-5 transition-all duration-500 h-8"
               key={index}
             >
               <Link href={sub.path}>

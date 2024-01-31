@@ -7,7 +7,7 @@ import Logo from "../common/Logo";
 const Navbar = ({ onOpenMenu }) => {
   return (
     <nav className="w-full h-[75px]">
-      <div className="container-lg h-full">
+      <div className="container-xl h-full">
         <div className="h-full flex flex-wrap justify-between items-center">
           <Logo />
           <div className="hidden bg-lightBg h-[48px] rounded-full px-7 w-[540px] py-2 max-w-full lg:flex justify-between items-center">

@@ -2,10 +2,10 @@ import Image from "next/image";
 import React from "react";
 import { RiBookmarkLine } from "react-icons/ri";
 
-const ConversionCard = ({ data }) => {
+const ConversionCard = ({ data, className, bookmarked = false }) => {
   return (
-    <div className="px-3 pt-7 pb-12">
-      <div className="w-full h-[160px] sm:h-[200px] md:h-[230px] p-3 sm:px-6 sm:py-7 border rounded-xl hover:shadow-xl transition-all duration-300 relative group">
+    <div className={`${className}`}>
+      <div className="w-full h-[180px] sm:h-[200px] md:h-[230px] p-3 sm:px-6 sm:py-7 border rounded-xl hover:shadow-xl transition-all duration-300 relative group">
         <Image
           src={data.icon}
           alt="Pdf to Word"
@@ -22,11 +22,13 @@ const ConversionCard = ({ data }) => {
           </p>
         </div>
         {/* Bookmark button */}
-        <button
-          className={`absolute top-5 right-5 opacity-0 group-hover:opacity-100 transition-all duration-300`}
-        >
-          <RiBookmarkLine className="text-2xl" />
-        </button>
+        {!bookmarked && (
+          <button
+            className={`absolute top-5 right-5 opacity-0 group-hover:opacity-100 transition-all duration-300`}
+          >
+            <RiBookmarkLine className="text-2xl" />
+          </button>
+        )}
       </div>
     </div>
   );

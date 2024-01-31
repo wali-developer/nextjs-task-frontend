@@ -100,7 +100,7 @@ const ConvertFromPDF = () => {
     },
   ];
   return (
-    <section className="w-full bg-white py-16">
+    <section className="w-full bg-white py-3 sm:py-12">
       <div className="container-lg">
         <div className="flex justify-between items-center">
           <h1 className="text-xl sm:text-2xl lg:text-3xl/9 font-bold text-darkText font-harmony">
@@ -116,10 +116,14 @@ const ConvertFromPDF = () => {
           </div>
         </div>
       </div>
-      <div className="container-lg xl:w-[79%]">
+      <div className="container-lg xl:w-[88%]">
         <Slider {...sliderSettings}>
           {pdfConversions.map((item, index) => (
-            <ConversionCard key={index} data={item} />
+            <ConversionCard
+              key={index}
+              data={item}
+              className="px-2 sm:px-3 pt-5 pb-8 sm:pt-7 sm:pb-12"
+            />
           ))}
         </Slider>
       </div>
@@ -133,7 +137,7 @@ const NextArrow = (props) => {
   return (
     <div
       className={
-        "flex justify-center items-center border-[3px] border-black/50 rounded-full w-[30px] h-[30px] sm:w-[40px] sm:h-[40px] absolute -right-2 lg:-right-4 bg-white md:-right-10 top-1/2 translate-y-[-70%] cursor-pointer"
+        "flex justify-center items-center border-[3px] border-black/50 rounded-full w-[30px] h-[30px] md:w-[40px] md:h-[40px] absolute -right-2 lg:-right-4 bg-white md:-right-10 top-1/2 translate-y-[-70%] cursor-pointer"
       }
       onClick={onClick}
     >
@@ -148,7 +152,7 @@ const PrevArrow = (props) => {
   return (
     <div
       className={
-        "flex justify-center items-center border-[3px] border-black/50 rounded-full w-[30px] h-[30px] sm:w-[40px] sm:h-[40px] absolute -left-2 lg:-left-4 bg-white md:-left-10 top-1/2 translate-y-[-70%] cursor-pointer z-[99]"
+        "flex justify-center items-center border-[3px] border-black/50 rounded-full w-[30px] h-[30px] md:w-[40px] md:h-[40px] absolute -left-2 lg:-left-4 bg-white md:-left-10 top-1/2 translate-y-[-70%] cursor-pointer z-[99]"
       }
       onClick={onClick}
     >

@@ -5,6 +5,7 @@ import { FaTwitter } from "react-icons/fa";
 import { FaFacebookF } from "react-icons/fa";
 import Logo from "../common/Logo";
 import { MdOutlineDarkMode } from "react-icons/md";
+import ThemeButton from "../common/ThemeButton";
 
 const Footer = () => {
   const internalLInks = [
@@ -139,9 +140,7 @@ const Footer = () => {
                 </li>
               ))}
             </ul>
-            <button className="w-12 h-12 rounded-full bg-[#DEDEDE] flex justify-center items-center">
-              <MdOutlineDarkMode className="text-xl text-black" />
-            </button>
+            <ThemeButton />
           </div>
         </div>
       </div>

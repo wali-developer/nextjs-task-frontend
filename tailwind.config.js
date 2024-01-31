@@ -5,6 +5,7 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
+  darkMode: ["class"],
   theme: {
     extend: {
       fontFamily: {
@@ -14,6 +15,7 @@ module.exports = {
         dodgerBlue: "#646FF3",
         lightBg: "#F2F2F2",
         darkText: "#121212",
+        darkBg: "#0A1016",
       },
     },
   },
