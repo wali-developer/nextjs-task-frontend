@@ -3,29 +3,37 @@
 @tailwind utilities;
 
 body {
-    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
-
 .container-lg {
-    width: 78%;
-    max-width: 1920px;
-    margin: auto;
+  width: 78%;
+  max-width: 1920px;
+  margin: auto;
+}
+.container-xl {
+  width: 90%;
+  max-width: 1920px;
+  margin: auto;
 }
 
 @media only screen and (max-width: 1200px) {
+  .container-lg {
+    width: 90%;
+    max-width: 100%;
+  }
 
-    .container-lg {
-        width: 90%;
-        max-width: 100%;
-        margin: auto;
-    }
+  .container-xl {
+    width: 95%;
+    max-width: 100%;
+  }
 }
 
 @media only screen and (max-width: 768px) {
-    .container-lg {
-        width: 93%;
-        max-width: 100%;
-        margin: auto;
-    }
+  .container-lg {
+    width: 93%;
+    max-width: 100%;
+  }
 }
