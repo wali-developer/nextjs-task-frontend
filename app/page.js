@@ -1,9 +1,13 @@
-import ConvertFromPDFBlock from "@/components/home/ConvertFromPDFBlock";
+import Bookmarks from "@/components/home/Bookmarks";
+import ConvertFromPDF from "@/components/home/ConvertFromPDF";
+import ConvertToPDF from "@/components/home/ConvertToPDF";
 
 export default function Home() {
   return (
     <main>
-      <ConvertFromPDFBlock />
+      <Bookmarks />
+      <ConvertFromPDF />
+      <ConvertToPDF />
     </main>
   );
 }
