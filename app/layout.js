@@ -1,5 +1,5 @@
 import localFont from "next/font/local";
-import "./globals.css";
+import "../styles/globals.css";
 
 // React slick stylesheets
 import "slick-carousel/slick/slick.css";
@@ -7,27 +7,7 @@ import "slick-carousel/slick/slick-theme.css";
 import Footer from "@/components/layout/Footer";
 import Header from "@/components/layout/Header";
 import { ThemeProvider } from "@/components/ThemeProvider";
-
-const harmonyFonts = localFont({
-  src: [
-    {
-      path: "../public/fonts/HarmonyOS_Sans_Regular.ttf",
-      weight: "400",
-      style: "normal",
-    },
-    {
-      path: "../public/fonts/HarmonyOS_Sans_Medium.ttf",
-      weight: "500",
-      style: "normal",
-    },
-    {
-      path: "../public/fonts/HarmonyOS_Sans_Bold.ttf",
-      weight: "700",
-      style: "normal",
-    },
-  ],
-  variable: "--font-harmony",
-});
+import harmonyFonts from "@/styles/fonts";
 
 export const metadata = {
   title: "Frontend Task with NextJS",
@@ -37,7 +17,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${harmonyFonts.variable} bg-white dark:bg-slate-900`}>
+      <body
+        className={`${harmonyFonts.variable} m-0 p-0 bg-white dark:bg-darkBg`}
+      >
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <Header />
           {children}

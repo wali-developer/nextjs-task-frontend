@@ -9,12 +9,12 @@ const DropdownItem = ({ item }) => {
     <>
       <li className="relative">
         <div
-          className="inline-block lg:border-b-2 border-white lg:hover:border-[#523ee8] transition-all duration-500 px-2 lg:pb-5 lg:pt-5"
+          className="inline-block lg:border-b-2 border-white dark:lg:border-darkBg lg:hover:border-[#523ee8] transition-all duration-500 px-2 lg:pb-5 lg:pt-5"
           onMouseEnter={() => setVisible(true)}
           onMouseLeave={() => setVisible(false)}
         >
           <Link href={item.path}>
-            <span className="text-sm font-medium text-white lg:text-gray-600">
+            <span className="text-sm font-medium text-white lg:text-gray-600 lg:dark:text-gray-200">
               {item.name}
             </span>
           </Link>

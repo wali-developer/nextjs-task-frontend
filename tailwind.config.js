@@ -16,6 +16,7 @@ module.exports = {
         lightBg: "#F2F2F2",
         darkText: "#121212",
         darkBg: "#0A1016",
+        lightDark: "#2E2E2E",
       },
     },
   },

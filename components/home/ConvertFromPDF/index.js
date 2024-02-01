@@ -4,8 +4,9 @@ import Slider from "react-slick";
 import ConversionCard from "@/components/common/ConversionCard";
 import React from "react";
 import { FaAngleRight } from "react-icons/fa";
-import { FaAnglesLeft, FaAnglesRight } from "react-icons/fa6";
 import { IoArrowBack, IoArrowForward } from "react-icons/io5";
+import { pdfConversions } from "@/utils/data";
+import fromPdfStyles from "./styles";
 
 const ConvertFromPDF = () => {
   const sliderSettings = {
@@ -42,87 +43,26 @@ const ConvertFromPDF = () => {
     ],
   };
 
-  const pdfConversions = [
-    {
-      title: "PDF to Word",
-      desc: "Easily convert PDF to Word document",
-      icon: "/icons/pdf-word.svg",
-    },
-    {
-      title: "PDF to PPT",
-      desc: "Convert PDF to Powerpoint online",
-      icon: "/icons/pdf-ppt.svg",
-    },
-    {
-      title: "PDF to Excel",
-      desc: "Convert PDF to xls for free",
-      icon: "/icons/pdf-excel.svg",
-    },
-    {
-      title: "PDF to JPG",
-      desc: "Convert PDF to a set of opimized JPG, PNG, BMP, GIF, or TIFF images.",
-      icon: "/icons/pdf-jpg.svg",
-    },
-    {
-      title: "PDF to TXT",
-      desc: "Convert your PDF to TXT and extract text from your PDF.",
-      icon: "/icons/pdf-txt.svg",
-    },
-    {
-      title: "PDF to RTF",
-      desc: "Convert PDF to RTF online and free",
-      icon: "/icons/pdf-rtf.svg",
-    },
-    {
-      title: "PDF to Pages",
-      desc: "Convert pdf to Mac and windows.",
-      icon: "/icons/pdf-pages.svg",
-    },
-    {
-      title: "PDF to HTML",
-      desc: "Convert your PDF documents to HTML web page.",
-      icon: "/icons/pdf-html.svg",
-    },
-    {
-      title: "PDF to DXF",
-      desc: "The best online tool to convert PDF to DXF online.",
-      icon: "/icons/pdf-dxf.svg",
-    },
-    {
-      title: "PDF to EPUB",
-      desc: "Convert PDF file to EPUB ebook.",
-      icon: "/icons/pdf-epub.svg",
-    },
-    {
-      title: "OCR",
-      desc: "Convert your scanned PDFs and images into editable Word, Excel, and PPT.",
-      icon: "/icons/ocr.svg",
-    },
-  ];
   return (
-    <section className="w-full bg-white py-3 sm:py-12">
+    <section className={fromPdfStyles.wrapper}>
       <div className="container-lg">
-        <div className="flex justify-between items-center">
-          <h1 className="text-xl sm:text-2xl lg:text-3xl/9 font-bold text-darkText font-harmony">
-            Convert from PDF
-          </h1>
-          <div className="flex gap-x-1 items-center bg-lightBg rounded-full px-5 cursor-pointer py-2.5">
-            <span className="text-xs text-darkText font-bold uppercase">
-              All
-            </span>
-            <span className="text-darkText text-base">
+        <div className={fromPdfStyles.headingRow}>
+          <h1 className={fromPdfStyles.heading}>Convert from PDF</h1>
+          <div className={fromPdfStyles.allButton}>
+            <span className={fromPdfStyles.btnText}>All</span>
+            <span className={fromPdfStyles.icon}>
               <FaAngleRight />
             </span>
           </div>
         </div>
       </div>
-      <div className="container-lg xl:w-[88%]">
+      <div className={fromPdfStyles.slierContainer}>
         <Slider {...sliderSettings}>
           {pdfConversions.map((item, index) => (
             <ConversionCard
               key={index}
               data={item}
-              className="px-2 sm:px-3 pt-5 pb-8 sm:pt-7 sm:pb-12"
+              className={fromPdfStyles.cardWrapper}
             />
           ))}
         </Slider>
@@ -135,13 +75,8 @@ const ConvertFromPDF = () => {
 const NextArrow = (props) => {
   const { onClick } = props;
   return (
-    <div
-      className={
-        "flex justify-center items-center border-[3px] border-black/50 rounded-full w-[30px] h-[30px] md:w-[40px] md:h-[40px] absolute -right-2 lg:-right-4 bg-white md:-right-10 top-1/2 translate-y-[-70%] cursor-pointer"
-      }
-      onClick={onClick}
-    >
-      <IoArrowForward className="text-base sm:text-xl text-black/50" />
+    <div className={fromPdfStyles.prevButton} onClick={onClick}>
+      <IoArrowForward className={fromPdfStyles.prevIcon} />
     </div>
   );
 };
@@ -150,13 +85,8 @@ const NextArrow = (props) => {
 const PrevArrow = (props) => {
   const { onClick } = props;
   return (
-    <div
-      className={
-        "flex justify-center items-center border-[3px] border-black/50 rounded-full w-[30px] h-[30px] md:w-[40px] md:h-[40px] absolute -left-2 lg:-left-4 bg-white md:-left-10 top-1/2 translate-y-[-70%] cursor-pointer z-[99]"
-      }
-      onClick={onClick}
-    >
-      <IoArrowBack className="text-base sm:text-xl text-black/50" />
+    <div className={fromPdfStyles.nextButton} onClick={onClick}>
+      <IoArrowBack className={fromPdfStyles.nextIcon} />
     </div>
   );
 };
