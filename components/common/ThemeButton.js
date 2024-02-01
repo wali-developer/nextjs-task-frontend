@@ -12,11 +12,16 @@ const ThemeButton = () => {
       className="w-12 h-12 rounded-full bg-[#DEDEDE] flex justify-center items-center"
       onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
     >
-      {/* {theme === "dark" ? (
-        <FiSun className="text-xl text-black" />
-      ) : ( */}
-      <MdOutlineDarkMode className="text-xl text-black" />
-      {/* )} */}
+      <MdOutlineDarkMode
+        className={`text-xl text-black ${
+          theme === "dark" ? "opacity-0 invisible w-0" : ""
+        }`}
+      />
+      <FiSun
+        className={`text-xl text-black ${
+          theme === "light" ? "opacity-0 invisible w-0" : ""
+        }`}
+      />
     </button>
   );
 };
