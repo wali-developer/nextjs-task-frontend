@@ -7,6 +7,7 @@ import { FiSun } from "react-icons/fi";
 
 const ThemeButton = () => {
   const { theme, setTheme } = useTheme();
+  const selectedTheme = theme === "light" ? "light" : "dark";
   return (
     <button
       className="w-12 h-12 rounded-full bg-[#DEDEDE] flex justify-center items-center"
@@ -14,12 +15,12 @@ const ThemeButton = () => {
     >
       <MdOutlineDarkMode
         className={`text-xl text-black ${
-          theme === "dark" ? "opacity-0 invisible w-0" : ""
+          selectedTheme == "dark" ? "opacity-0 invisible w-0" : ""
         }`}
       />
       <FiSun
         className={`text-xl text-black ${
-          theme === "light" ? "opacity-0 invisible w-0" : ""
+          selectedTheme == "light" ? "opacity-0 invisible w-0" : ""
         }`}
       />
     </button>

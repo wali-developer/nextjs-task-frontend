@@ -4,9 +4,9 @@ const fromPdfStyles = {
   heading:
     "text-xl sm:text-2xl lg:text-3xl/9 font-bold text-darkText dark:text-white font-harmony",
   allButton:
-    "flex gap-x-1 items-center bg-lightBg rounded-full px-5 cursor-pointer py-2.5",
+    "flex gap-x-1 items-center bg-lightBg rounded-full px-3 sm:px-5 cursor-pointer py-1.5 sm:py-2.5",
   btnText: "text-xs text-darkText font-bold uppercase",
-  icon: "text-darkText text-base",
+  icon: "text-darkText text-sm sm:text-base",
   slierContainer: "container-lg xl:w-[88%]",
   cardWrapper: "px-2 sm:px-3 pt-5 pb-8 sm:pt-7 sm:pb-12",
   prevButton:
