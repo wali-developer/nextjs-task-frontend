@@ -1,10 +1,14 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
 import { IoSearch } from "react-icons/io5";
 import { FaBars } from "react-icons/fa6";
 import Logo from "../common/Logo";
 import layoutStyles from "./style";
+import MobileSearch from "./MobileSearch";
 
 const Navbar = ({ onOpenMenu }) => {
+  const [show, setShow] = useState(false);
   return (
     <nav className="w-full h-[75px]">
       <div className="container-xl h-full">
@@ -21,9 +25,12 @@ const Navbar = ({ onOpenMenu }) => {
             </span>
           </div>
           <div className={layoutStyles.topButtons}>
-            {/* <span className="block lg:hidden text-2xl text-black ml-6">
+            <span
+              className={layoutStyles.mobileSearchIcon}
+              onClick={() => setShow(true)}
+            >
               <IoSearch />
-            </span> */}
+            </span>
             <button className={layoutStyles.login}>Log in</button>
             <button className={layoutStyles.signup}>Sign up</button>
             {/* Menu Bar button below medium screen */}
@@ -33,6 +40,9 @@ const Navbar = ({ onOpenMenu }) => {
           </div>
         </div>
       </div>
+
+      {/* Search on mobile */}
+      <MobileSearch show={show} setShow={setShow} />
     </nav>
   );
 };

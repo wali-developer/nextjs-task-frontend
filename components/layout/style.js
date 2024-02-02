@@ -8,11 +8,14 @@ const layoutStyles = {
     "text-base w-full h-full bg-transparent focus:outline-none border-r dark:border-gray-600",
   iconWrapper: "text-2xl text-black ml-6",
   searchIcon: "text-darkText dark:text-gray-200",
-  topButtons: "flex gap-x-4 sm:gap-x-7 items-center ml-auto lg:ml-0",
-  login: "text-sm sm:text-base  font-medium text-gray-500 dark:text-gray-200",
+  topButtons: "flex items-center gap-x-3 sm:gap-x-0 ml-auto lg:ml-0",
+  mobileSearchIcon:
+    "block lg:hidden text-2xl text-black dark:text-gray-300 ml-6 cursor-pointer",
+  login:
+    "text-sm sm:text-base sm:bg-white sm:dark:bg-transparent bg-dodgerBlue font-medium text-white sm:text-gray-500 sm:dark:text-white dark:text-gray-200 h-[33px] sm:h-[44px] rounded-full px-5 sm:px-7",
   signup:
-    "bg-dodgerBlue text-white h-[36px] sm:h-[44px] rounded-full px-5 sm:px-7 text-sm sm:text-base",
-  bar: "text-xl text-black block lg:hidden dark:text-gray-300",
+    "bg-dodgerBlue text-white h-[36px] sm:h-[44px] rounded-full px-5 sm:px-7 text-sm hidden sm:text-base sm:block",
+  bar: "text-xl text-black block lg:hidden dark:text-gray-300 lg:ml-0 sm:ml-5",
   menu: "list-none flex gap-x-5 items-center xl:justify-between flex-wrap z-[99] fixed top-0 right-0 bg-dodgerBlue w-full h-full lg:static lg:bg-transparent flex-col lg:flex-row gap-y-7 justify-center transition-all duration-300 lg:px-8 xl:px-12",
   visibleState:
     "invisible opacity-0 w-0 lg:opacity-100 lg:flex md:w-full lg:h-full lg:visible",
